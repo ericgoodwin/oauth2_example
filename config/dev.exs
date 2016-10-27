@@ -42,6 +42,11 @@ config :oauth2_example, OAuth2Example.Repo,
   hostname: "localhost",
   pool_size: 10
 
+config :oauth2_example, Lightspeed,
+  client_id: System.get_env("LIGHTSPEED_CLIENT_ID"),
+  client_secret: System.get_env("LIGHTSPEED_CLIENT_SECRET"),
+  redirect_uri: System.get_env("LIGHTSPEED_REDIRECT_URI")
+
 config :oauth2_example, GitHub,
   client_id: System.get_env("GITHUB_CLIENT_ID"),
   client_secret: System.get_env("GITHUB_CLIENT_SECRET"),

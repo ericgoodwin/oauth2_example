@@ -29,7 +29,6 @@
       </div>
     </div>
     <div class="jumbotron">
-      <span class="logo"></span>
       <h2>OAuth2/Phoenix Example Application!</h2>
       <p class="lead">
         This is an application to show an example of how to wire up
@@ -39,9 +38,6 @@
 
       <br>
       <br>
-
-      <iframe src="https://ghbtns.com/github-btn.html?user=scrogson&repo=oauth2_example&type=star&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-      <iframe src="https://ghbtns.com/github-btn.html?user=scrogson&repo=oauth2_example&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 
       <%= if @current_user do %>
         <h2>Welcome, <%= @current_user.name %>!</h2>
@@ -64,6 +60,11 @@
         <a class="btn btn-primary btn-lg" href="<%= auth_path @conn, :index, "facebook" %>">
           <i class="fa fa-facebook"></i>
           Sign in with Facebook
+        </a>
+
+        <a class="btn btn-primary btn-lg" href="<%= auth_path @conn, :index, "lightspeed" %>">
+          <i class="fa fa-lightspeed"></i>
+          Sign in with Lightspeed
         </a>
       <% end %>
     </div>
