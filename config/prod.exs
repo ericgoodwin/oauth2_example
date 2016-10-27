@@ -22,7 +22,6 @@ config :oauth2_example, OAuth2Example.Endpoint,
 config :oauth2_example, OAuth2Example.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
-  database: "oauth2_example_prod",
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
   ssl: true
 
